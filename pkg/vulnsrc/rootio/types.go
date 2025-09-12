@@ -55,14 +55,11 @@ type RawCVEInfo struct {
 	Severity         string   `json:"severity,omitempty"`
 }
 
-// RawLanguageFeed represents the Root.io API feed format for language packages
-type RawLanguageFeed struct {
-	Ecosystem string               `json:"ecosystem"`
-	Packages  []RawLanguagePackage `json:"packages"`
-}
-
 // RawLanguagePackage represents a language package with its vulnerabilities
 type RawLanguagePackage struct {
 	Name string                `json:"name"`
 	CVEs map[string]RawCVEInfo `json:"cves"`
 }
+
+// RawAppFeed represents the combined app feed format containing all language ecosystems
+type RawAppFeed map[string][]RawLanguagePackage
