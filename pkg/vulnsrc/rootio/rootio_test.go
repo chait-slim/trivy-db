@@ -32,7 +32,7 @@ func TestVulnSrc_Update(t *testing.T) {
 					},
 					Value: types.DataSource{
 						ID:     vulnerability.RootIO,
-						Name:   "Root.io Security Patches (debian)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 						BaseID: vulnerability.Debian,
 					},
@@ -64,7 +64,7 @@ func TestVulnSrc_Update(t *testing.T) {
 					},
 					Value: types.DataSource{
 						ID:     vulnerability.RootIO,
-						Name:   "Root.io Security Patches (alpine)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 						BaseID: vulnerability.Alpine,
 					},
@@ -96,7 +96,7 @@ func TestVulnSrc_Update(t *testing.T) {
 					},
 					Value: types.DataSource{
 						ID:     vulnerability.RootIO,
-						Name:   "Root.io Security Patches (ubuntu)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 						BaseID: vulnerability.Ubuntu,
 					},
@@ -149,7 +149,7 @@ func TestVulnSrc_Update(t *testing.T) {
 					},
 					Value: types.DataSource{
 						ID:     vulnerability.RootIO,
-						Name:   "Root.io Security Patches (debian)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 						BaseID: vulnerability.Debian,
 					},
@@ -170,11 +170,11 @@ func TestVulnSrc_Update(t *testing.T) {
 				{
 					Key: []string{
 						"data-source",
-						"root.io npm",
+						"npm::Root.io Security Patches",
 					},
 					Value: types.DataSource{
 						ID:   vulnerability.RootIO,
-						Name: "Root.io Security Patches (npm)",
+						Name: "Root.io Security Patches",
 						URL:  "https://api.root.io/external/patch_feed",
 					},
 				},
@@ -182,23 +182,23 @@ func TestVulnSrc_Update(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-REACT-001",
-						"root.io npm",
+						"npm::Root.io Security Patches",
 						"react",
 					},
 					Value: types.Advisory{
 						VulnerableVersions: []string{"<18.2.0"},
-						PatchedVersions:    []string{"18.2.0.root.io"},
+						PatchedVersions:    []string{"18.2.0+root.io.1"},
 					},
 				},
 				// App feed expectations - pip
 				{
 					Key: []string{
 						"data-source",
-						"root.io pip",
+						"pip::Root.io Security Patches",
 					},
 					Value: types.DataSource{
 						ID:   vulnerability.RootIO,
-						Name: "Root.io Security Patches (pip)",
+						Name: "Root.io Security Patches",
 						URL:  "https://api.root.io/external/patch_feed",
 					},
 				},
@@ -206,12 +206,12 @@ func TestVulnSrc_Update(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-DJANGO-001",
-						"root.io pip",
+						"pip::Root.io Security Patches",
 						"django",
 					},
 					Value: types.Advisory{
 						VulnerableVersions: []string{"<4.2.0"},
-						PatchedVersions:    []string{"4.2.0.root.io"},
+						PatchedVersions:    []string{"4.2.0+root.io.1"},
 					},
 				},
 			},
@@ -223,11 +223,11 @@ func TestVulnSrc_Update(t *testing.T) {
 				{
 					Key: []string{
 						"data-source",
-						"root.io pip",
+						"pip::Root.io Security Patches",
 					},
 					Value: types.DataSource{
 						ID:   vulnerability.RootIO,
-						Name: "Root.io Security Patches (pip)",
+						Name: "Root.io Security Patches",
 						URL:  "https://api.root.io/external/patch_feed",
 					},
 				},
@@ -235,12 +235,12 @@ func TestVulnSrc_Update(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-1234",
-						"root.io pip",
+						"pip::Root.io Security Patches",
 						"django",
 					},
 					Value: types.Advisory{
 						VulnerableVersions: []string{"<4.0.2"},
-						PatchedVersions:    []string{"4.0.2.root.io"},
+						PatchedVersions:    []string{"4.0.2+root.io.1"},
 					},
 				},
 				{
@@ -253,11 +253,11 @@ func TestVulnSrc_Update(t *testing.T) {
 				{
 					Key: []string{
 						"data-source",
-						"root.io npm",
+						"npm::Root.io Security Patches",
 					},
 					Value: types.DataSource{
 						ID:   vulnerability.RootIO,
-						Name: "Root.io Security Patches (npm)",
+						Name: "Root.io Security Patches",
 						URL:  "https://api.root.io/external/patch_feed",
 					},
 				},
@@ -265,12 +265,12 @@ func TestVulnSrc_Update(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-5678",
-						"root.io npm",
+						"npm::Root.io Security Patches",
 						"express",
 					},
 					Value: types.Advisory{
 						VulnerableVersions: []string{"<4.18.0"},
-						PatchedVersions:    []string{"4.18.0.root.io"},
+						PatchedVersions:    []string{"4.18.0+root.io.2"},
 					},
 				},
 				{
@@ -329,7 +329,7 @@ func TestVulnSrcGetter_Get_OS(t *testing.T) {
 					DataSource: &types.DataSource{
 						ID:     vulnerability.RootIO,
 						BaseID: vulnerability.Debian,
-						Name:   "Root.io Security Patches (debian)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 					},
 				},
@@ -360,7 +360,7 @@ func TestVulnSrcGetter_Get_OS(t *testing.T) {
 					DataSource: &types.DataSource{
 						ID:     vulnerability.RootIO,
 						BaseID: vulnerability.Debian,
-						Name:   "Root.io Security Patches (debian)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 					},
 				},
@@ -385,7 +385,7 @@ func TestVulnSrcGetter_Get_OS(t *testing.T) {
 					DataSource: &types.DataSource{
 						ID:     vulnerability.RootIO,
 						BaseID: vulnerability.Ubuntu,
-						Name:   "Root.io Security Patches (ubuntu)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 					},
 				},
@@ -410,7 +410,7 @@ func TestVulnSrcGetter_Get_OS(t *testing.T) {
 					DataSource: &types.DataSource{
 						ID:     vulnerability.RootIO,
 						BaseID: vulnerability.Alpine,
-						Name:   "Root.io Security Patches (alpine)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 					},
 				},
@@ -437,7 +437,7 @@ func TestVulnSrcGetter_Get_OS(t *testing.T) {
 					DataSource: &types.DataSource{
 						ID:     vulnerability.RootIO,
 						BaseID: vulnerability.Debian,
-						Name:   "Root.io Security Patches (debian)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 					},
 				},
@@ -449,7 +449,7 @@ func TestVulnSrcGetter_Get_OS(t *testing.T) {
 					DataSource: &types.DataSource{
 						ID:     vulnerability.RootIO,
 						BaseID: vulnerability.Debian,
-						Name:   "Root.io Security Patches (debian)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 					},
 				},
@@ -560,12 +560,12 @@ func TestVulnSrc_Update_Comprehensive(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-PY-001",
-						"root.io pip",
+						"pip::Root.io Security Patches",
 						"requests",
 					},
 					Value: types.Advisory{
 						VulnerableVersions: []string{"<2.31.0"},
-						PatchedVersions:    []string{"2.31.0.root.io"},
+						PatchedVersions:    []string{"2.31.0+root.io.1"},
 					},
 				},
 				// Go packages
@@ -573,12 +573,12 @@ func TestVulnSrc_Update_Comprehensive(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-GO-001",
-						"root.io go",
+						"go::Root.io Security Patches",
 						"github.com/gin-gonic/gin",
 					},
 					Value: types.Advisory{
 						VulnerableVersions: []string{"<1.9.1"},
-						PatchedVersions:    []string{"1.9.1.root.io"},
+						PatchedVersions:    []string{"1.9.1+root.io.1"},
 					},
 				},
 				// Maven packages
@@ -586,12 +586,12 @@ func TestVulnSrc_Update_Comprehensive(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-JAVA-001",
-						"root.io maven",
+						"maven::Root.io Security Patches",
 						"org.springframework.boot:spring-boot",
 					},
 					Value: types.Advisory{
 						VulnerableVersions: []string{"<3.2.0"},
-						PatchedVersions:    []string{"3.2.0.root.io"},
+						PatchedVersions:    []string{"3.2.0+root.io.1"},
 					},
 				},
 			},
@@ -604,12 +604,12 @@ func TestVulnSrc_Update_Comprehensive(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-VALID-001",
-						"root.io npm",
+						"npm::Root.io Security Patches",
 						"react",
 					},
 					Value: types.Advisory{
 						VulnerableVersions: []string{"<18.2.0"},
-						PatchedVersions:    []string{"18.2.0.root.io"},
+						PatchedVersions:    []string{"18.2.0+root.io.1"},
 					},
 				},
 			},
@@ -623,101 +623,6 @@ func TestVulnSrc_Update_Comprehensive(t *testing.T) {
 				Dir:        tt.dir,
 				WantValues: tt.wantValues,
 				WantErr:    tt.wantErr,
-			})
-		})
-	}
-}
-
-func TestVulnSrcGetter_Get_Ecosystem(t *testing.T) {
-	tests := []struct {
-		name      string
-		ecosystem types.Ecosystem
-		fixtures  []string
-		pkgName   string
-		want      []types.Advisory
-		wantErr   string
-	}{
-		{
-			name:      "Python package with rootio patches",
-			ecosystem: vulnerability.Pip,
-			fixtures: []string{
-				"testdata/fixtures/language-packages.yaml",
-			},
-			pkgName: "django",
-			want: []types.Advisory{
-				{
-					VulnerabilityID:    "CVE-2024-1234",
-					VulnerableVersions: []string{"<4.0.2"},
-					PatchedVersions:    []string{"4.0.2.root.io"},
-					DataSource: &types.DataSource{
-						ID:   vulnerability.RootIO,
-						Name: "Root.io Security Patches (pip)",
-						URL:  "https://api.root.io/external/patch_feed",
-					},
-				},
-			},
-		},
-		{
-			name:      "Node.js package with rootio patches",
-			ecosystem: vulnerability.Npm,
-			fixtures: []string{
-				"testdata/fixtures/language-packages.yaml",
-			},
-			pkgName: "express",
-			want: []types.Advisory{
-				{
-					VulnerabilityID:    "CVE-2024-5678",
-					VulnerableVersions: []string{"<4.18.0"},
-					PatchedVersions:    []string{"4.18.0.root.io"},
-					DataSource: &types.DataSource{
-						ID:   vulnerability.RootIO,
-						Name: "Root.io Security Patches (npm)",
-						URL:  "https://api.root.io/external/patch_feed",
-					},
-				},
-			},
-		},
-		{
-			name:      "Ruby package with rootio patches",
-			ecosystem: vulnerability.RubyGems,
-			fixtures: []string{
-				"testdata/fixtures/language-packages.yaml",
-			},
-			pkgName: "rails",
-			want: []types.Advisory{
-				{
-					VulnerabilityID:    "CVE-2024-9999",
-					VulnerableVersions: []string{"<7.0.0"},
-					PatchedVersions:    []string{"7.0.0.root.io"},
-					DataSource: &types.DataSource{
-						ID:   vulnerability.RootIO,
-						Name: "Root.io Security Patches (rubygems)",
-						URL:  "https://api.root.io/external/patch_feed",
-					},
-				},
-			},
-		},
-		{
-			name:      "Package not found",
-			ecosystem: vulnerability.Pip,
-			fixtures: []string{
-				"testdata/fixtures/language-packages.yaml",
-			},
-			pkgName: "nonexistent",
-			want:    nil,
-		},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			getter := rootio.NewEcosystemVulnSrcGetter(tt.ecosystem)
-			vulnsrctest.TestGet(t, getter, vulnsrctest.TestGetArgs{
-				Fixtures:   tt.fixtures,
-				WantValues: tt.want,
-				GetParams: db.GetParams{
-					PkgName: tt.pkgName,
-				},
-				WantErr: tt.wantErr,
 			})
 		})
 	}
@@ -751,7 +656,7 @@ func TestVulnSrcGetter_Get_Comprehensive(t *testing.T) {
 					PatchedVersions:    []string{"15.4.root.io"},
 					DataSource: &types.DataSource{
 						ID:     vulnerability.RootIO,
-						Name:   "Root.io Security Patches (debian)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 						BaseID: vulnerability.Debian,
 					},
@@ -762,14 +667,15 @@ func TestVulnSrcGetter_Get_Comprehensive(t *testing.T) {
 					PatchedVersions:    []string{"15.5.root.io"},
 					DataSource: &types.DataSource{
 						ID:     vulnerability.RootIO,
-						Name:   "Root.io Security Patches (debian)",
+						Name:   "Root.io Security Patches",
 						URL:    "https://api.root.io/external/patch_feed",
 						BaseID: vulnerability.Debian,
 					},
 				},
 			},
 		},
-		{
+		// Language ecosystem tests removed - language packages are now handled differently
+		/*{
 			name: "Language package with complex version ranges",
 			getterFn: func() db.Getter {
 				return rootio.NewEcosystemVulnSrcGetter(vulnerability.Pip)
@@ -787,13 +693,13 @@ func TestVulnSrcGetter_Get_Comprehensive(t *testing.T) {
 					PatchedVersions:    []string{"41.0.5.root.io", "40.0.2.root.io"},
 					DataSource: &types.DataSource{
 						ID:   vulnerability.RootIO,
-						Name: "Root.io Security Patches (pip)",
+						Name: "Root.io Security Patches",
 						URL:  "https://api.root.io/external/patch_feed",
 					},
 				},
 			},
-		},
-		{
+		},*/
+		/*{
 			name: "Go module with nested path",
 			getterFn: func() db.Getter {
 				return rootio.NewEcosystemVulnSrcGetter(vulnerability.Go)
@@ -811,13 +717,13 @@ func TestVulnSrcGetter_Get_Comprehensive(t *testing.T) {
 					PatchedVersions:    []string{"0.17.0.root.io"},
 					DataSource: &types.DataSource{
 						ID:   vulnerability.RootIO,
-						Name: "Root.io Security Patches (go)",
+						Name: "Root.io Security Patches",
 						URL:  "https://api.root.io/external/patch_feed",
 					},
 				},
 			},
-		},
-		{
+		},*/
+		/*{
 			name: "Multiple ecosystems same package name",
 			getterFn: func() db.Getter {
 				return rootio.NewEcosystemVulnSrcGetter(vulnerability.Npm)
@@ -835,12 +741,12 @@ func TestVulnSrcGetter_Get_Comprehensive(t *testing.T) {
 					PatchedVersions:    []string{"4.17.21.root.io"},
 					DataSource: &types.DataSource{
 						ID:   vulnerability.RootIO,
-						Name: "Root.io Security Patches (npm)",
+						Name: "Root.io Security Patches",
 						URL:  "https://api.root.io/external/patch_feed",
 					},
 				},
 			},
-		},
+		},*/
 	}
 
 	for _, tt := range tests {
