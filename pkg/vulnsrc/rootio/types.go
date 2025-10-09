@@ -35,7 +35,3 @@ type RawCVEInfo struct {
 	FixedVersions    []string `json:"fixed_versions"`
 	Severity         string   `json:"severity,omitempty"`
 }
-
-// RawAppFeed represents the combined app feed format containing all language ecosystems
-// Uses the same unified structure as OS feeds
-type RawAppFeed map[string][]RawDistroData
