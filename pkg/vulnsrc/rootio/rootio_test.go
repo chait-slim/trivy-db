@@ -170,7 +170,7 @@ func TestVulnSrc_Update(t *testing.T) {
 				{
 					Key: []string{
 						"data-source",
-						"npm::Root.io Security Patches",
+						"root.io npm",
 					},
 					Value: types.DataSource{
 						ID:   vulnerability.RootIO,
@@ -182,7 +182,7 @@ func TestVulnSrc_Update(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-REACT-001",
-						"npm::Root.io Security Patches",
+						"root.io npm",
 						"react",
 					},
 					Value: types.Advisory{
@@ -194,7 +194,7 @@ func TestVulnSrc_Update(t *testing.T) {
 				{
 					Key: []string{
 						"data-source",
-						"pip::Root.io Security Patches",
+						"root.io pip",
 					},
 					Value: types.DataSource{
 						ID:   vulnerability.RootIO,
@@ -206,7 +206,7 @@ func TestVulnSrc_Update(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-DJANGO-001",
-						"pip::Root.io Security Patches",
+						"root.io pip",
 						"django",
 					},
 					Value: types.Advisory{
@@ -223,7 +223,7 @@ func TestVulnSrc_Update(t *testing.T) {
 				{
 					Key: []string{
 						"data-source",
-						"pip::Root.io Security Patches",
+						"root.io pip",
 					},
 					Value: types.DataSource{
 						ID:   vulnerability.RootIO,
@@ -235,7 +235,7 @@ func TestVulnSrc_Update(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-1234",
-						"pip::Root.io Security Patches",
+						"root.io pip",
 						"django",
 					},
 					Value: types.Advisory{
@@ -253,7 +253,7 @@ func TestVulnSrc_Update(t *testing.T) {
 				{
 					Key: []string{
 						"data-source",
-						"npm::Root.io Security Patches",
+						"root.io npm",
 					},
 					Value: types.DataSource{
 						ID:   vulnerability.RootIO,
@@ -265,7 +265,7 @@ func TestVulnSrc_Update(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-5678",
-						"npm::Root.io Security Patches",
+						"root.io npm",
 						"express",
 					},
 					Value: types.Advisory{
@@ -560,7 +560,7 @@ func TestVulnSrc_Update_Comprehensive(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-PY-001",
-						"pip::Root.io Security Patches",
+						"root.io pip",
 						"requests",
 					},
 					Value: types.Advisory{
@@ -604,7 +604,7 @@ func TestVulnSrc_Update_Comprehensive(t *testing.T) {
 					Key: []string{
 						"advisory-detail",
 						"CVE-2024-VALID-001",
-						"npm::Root.io Security Patches",
+						"root.io npm",
 						"react",
 					},
 					Value: types.Advisory{
